@@ -48,11 +48,11 @@ body {
 	font-weight: bold;
 }
 
-.corrent {
+.correct {
 	color: green;
 }
 
-.incorrent {
+.incorrect {
 	color: red;
 	text-decoration: underline;
 }
