@@ -10,7 +10,6 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;	
-	min-height: 100vh;
 	margin: 0;
 	background-color: #b5ffdc;
 }
@@ -21,11 +20,12 @@ body {
 	padding: 1rem;
 	width: 700px;
 	max-width: 90%;
+	margin-top: 48vh;
 }
 
 #wpm {
 	position: absolute;
-	top: 4rem;
+	top: 40vh;
 	left: calc(50% - 350px);
 	font-size: 4rem;
 	color: #ffbfb5;
@@ -34,7 +34,7 @@ body {
 
 #acc {
 	position: absolute;
-	top: 4rem;
+	top: 40vh;
 	right: calc(50% - 350px);
 	font-size: 4rem;
 	color: #ffbfb5;
@@ -44,7 +44,7 @@ body {
 #quote {
 	margin-left: calc(1rem + 3px);
 	margin-right: calc(1rem + 3px);
-	font-size: 1.5rem;
+	font-size: 1.8rem;
 	font-weight: bold;
 }
 
