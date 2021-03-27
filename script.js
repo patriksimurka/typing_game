@@ -26,7 +26,7 @@ function get_wpm_and_acc() {
 	} else {
 		document.getElementById('acc').innerText = Math.floor((100*count)/(written.length)) + '%'
 	}
-	document.getElementById('wpm').innerText = Math.floor((count/5.7)/(elapsed)) + ' WPM'
+	document.getElementById('wpmc').innerText = Math.floor((count/5.7)/(elapsed))
 }
 
 async function get_next_quote() {

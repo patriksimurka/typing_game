@@ -76,3 +76,8 @@ animation: fadeIn ease 2s;
 100% {opacity:1;}
 }
 
+sup {
+	font-size: 22px;
+	color: #ffbfb5;
+	font-weight: bold;
+}
