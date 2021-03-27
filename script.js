@@ -1,4 +1,4 @@
-const quote_url = 'http://api.quotable.io/random'
+const quote_url = 'https://api.quotable.io/random'
 const quote_display = document.getElementById('quote')
 let written = []
 let start = true
@@ -21,7 +21,11 @@ function get_wpm_and_acc() {
 		clearInterval(window.running)
 		window.running = false
 	}
-	document.getElementById('acc').innerText = Math.floor((100*count)/(written.length)) + ' %'
+	if (written.length === 0) {
+		document.getElementById('acc').innerText = '100%'
+	} else {
+		document.getElementById('acc').innerText = Math.floor((100*count)/(written.length)) + '%'
+	}
 	document.getElementById('wpm').innerText = Math.floor((count/4.7)/(elapsed)) + ' WPM'
 }
 

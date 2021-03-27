@@ -17,14 +17,13 @@ body {
 .container {
 	background-color: #ffbfb5;
 	border-radius: .5rem;
-	padding: 1rem;
+	padding: 1.2rem;
+	padding-left: 1.5rem;
 	margin-top: 4rem;
 }
 
 #wpm {
 	float: left;
-	top: 40vh;
-	left: calc(50% - 350px);
 	font-size: 4rem;
 	color: #ffbfb5;
 	font-weight: bold;
@@ -32,16 +31,12 @@ body {
 
 #acc {
 	float: right;
-	top: 40vh;
-	margin-right: 10px;
 	font-size: 4rem;
 	color: #ffbfb5;
 	font-weight: bold;
 }
 
 #quote {
-	margin-left: calc(1rem + 3px);
-	margin-right: calc(1rem + 3px);
 	font-size: 1.8rem;
 	font-weight: bold;
 }
@@ -64,10 +59,20 @@ body {
 
 #obal {
 	width: 700px;
+	max-width: 90%;
 	margin-top: 35vh;
-
 }
 
 .hidden {
 	display: none;
-}	
+}
+
+.fadeIn {
+animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
