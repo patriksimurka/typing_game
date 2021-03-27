@@ -16,8 +16,8 @@ function get_wpm_and_acc() {
 			count++
 		}
 	})
-	console.log(written.length, arr_quote.length)
 	if (written.length >= arr_quote.length) {
+		document.getElementById('continue').classList.remove('hidden')
 		clearInterval(window.running)
 		window.running = false
 	}
@@ -33,7 +33,6 @@ async function get_next_quote() {
 		character_span.innerText = character
 		quote_display.appendChild(character_span)
 	})
-	
 }
 
 document.body.addEventListener("keypress", function(event) {
@@ -63,6 +62,9 @@ document.body.addEventListener("keydown", function(event) {
 		let arr_quote = quote_display.querySelectorAll('span')
 		arr_quote[index].classList.remove('incorrect')
 		arr_quote[index].classList.remove('correct')
+	}
+	if (event.keyCode === 13 && !window.running && written.length != 0) {
+		document.location.reload(false)
 	}
 })
 
