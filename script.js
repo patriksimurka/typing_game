@@ -1,4 +1,3 @@
-// https://patriksimurka.github.io/typing_game/
 const quote_url = 'https://api.quotable.io/random'
 const quote_display = document.getElementById('quote')
 let written = []
