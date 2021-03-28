@@ -8,7 +8,7 @@ function get_quote() {
 }
 
 function get_wpm_and_acc() {
-	elapsed = (new Date() - window.start_time) / 1000 / 60
+	let elapsed = (new Date() - window.start_time) / 1000 / 60
 	let arr_quote = quote_display.querySelectorAll('span')
 	let count = 0
 	arr_quote.forEach((span) => {
@@ -26,7 +26,7 @@ function get_wpm_and_acc() {
 	} else {
 		document.getElementById('acc').innerText = Math.floor((100*count)/(written.length)) + '%'
 	}
-	document.getElementById('wpmc').innerText = Math.floor((count/5.7)/(elapsed))
+	document.getElementById('wpmc').innerText = Math.floor((count/5)/(elapsed))
 }
 
 async function get_next_quote() {
@@ -67,7 +67,7 @@ document.body.addEventListener("keydown", function(event) {
 		arr_quote[index].classList.remove('incorrect')
 		arr_quote[index].classList.remove('correct')
 	}
-	if (event.keyCode === 13 && !window.running && written.length != 0) {
+	if (event.keyCode === 13 && !window.running && written.length !== 0) {
 		document.location.reload(false)
 	}
 })
